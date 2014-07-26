@@ -17,7 +17,7 @@
         <meta name="twitter:title" content="<?php echo $this->meta->title; ?>">
         <meta name="twitter:image" content="<?php echo $this->meta->image; ?>">
         <link href="http<?php if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') { echo 's'; }; ?>://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="/css/site.css" />
+        <link rel="stylesheet" type="text/css" href="/css/theme.css" />
         <?php $this->render_styles(); ?>
         <?php $this->render_scripts(); ?>
     </head>
