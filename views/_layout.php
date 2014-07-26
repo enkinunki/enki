@@ -34,7 +34,7 @@
         </div>
         
         <footer>
-            powered by <a href="https://github.com/ShadowedMists/enki" target="_blank">enki</a> 
+            powered by <a href="https://github.com/enkinunki/enki" target="_blank">enki</a> 
             | <a href="<?php echo $this->route_url(NULL, 'admin'); ?>">admin</a>
             <?php if ($session !== NULL ) { ?>| <a href="<?php echo $this->route_url('logoff', 'admin'); ?>">logoff</a><?php }?>
         </footer>
