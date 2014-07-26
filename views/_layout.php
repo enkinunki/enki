@@ -8,7 +8,8 @@
         <title><?php echo $this->meta->title; ?></title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="<?php echo $this->meta->description; ?>">
         <meta name="keywords" content="<?php echo $this->meta->keywords; ?>">
         <meta name="author" content="<?php echo $this->meta->author; ?>">
@@ -16,8 +17,9 @@
         <meta property="og:title" content="<?php echo $this->meta->title; ?>" />
         <meta property="og:image" content="<?php echo $this->meta->image; ?>" />
         <meta name="twitter:title" content="<?php echo $this->meta->title; ?>">
-        <meta name="twitter:image" content="<?php echo $this->meta->image; ?>">
+        <meta name="twitter:image" content="<?php echo $this->meta->image; ?>">        
         <link href="http<?php if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') { echo 's'; }; ?>://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/theme.css" />
         <?php $this->render_styles(); ?>
         <?php $this->render_scripts(); ?>
