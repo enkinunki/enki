@@ -19,10 +19,16 @@ for pak in $PACKAGE_LIST ; do
 done
 
 
-sudo cp etc/nginx/sites-available/default /etc/nginx/sites-available/default
 cd /tmp
 rm -rf master.zip* enki-master*
+
 wget https://github.com/enkinunki/enki/archive/master.zip
 unzip master.zip
+
+sudo mv enki-master/etc/nginx/sites-available/default /etc/nginx/sites-available/default
+sudo rm -rf enki-master/etc/nginx/sites-available
 sudo cp -rf enki-master/* /usr/share/nginx/html
+
 sudo chmod 755 -R /usr/share/nginx/html
+
+mysql -u root -p blog < /usr/share/nginx/html/db.sql
