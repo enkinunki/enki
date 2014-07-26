@@ -1,8 +1,12 @@
 #!/bin/bash
 
 ###
-# 1406216411s : tested on ubuntu trusty tahr
+# it will install prerequisites, deploy and create database.
+# 1406382774s : tested on ubuntu trusty tahr
 ##
+
+
+echo "prerequisites"
 
 PACKAGE_LIST="
 mysql-client
@@ -19,11 +23,12 @@ for pak in $PACKAGE_LIST ; do
 done
 
 
+echo "deploying"
 cd /tmp
 rm -rf master.zip* enki-master*
 
-wget https://github.com/enkinunki/enki/archive/master.zip
-unzip master.zip
+wget https://github.com/enkinunki/enki/archive/master.zip > /dev/null 2>&1
+unzip master.zip > /dev/null 2>&1
 
 sudo mv enki-master/etc/nginx/sites-available/default /etc/nginx/sites-available/default
 sudo rm -rf enki-master/etc/nginx/sites-available
@@ -33,4 +38,5 @@ sudo cp -rf enki-master/* /usr/share/nginx/html
 
 sudo chmod 755 -R /usr/share/nginx/html
 
-mysql -u root -p < /usr/share/nginx/html/db.sql
+echo "database creating"
+mysql -u root -psecret < /usr/share/nginx/html/db.sql
