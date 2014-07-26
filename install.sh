@@ -27,8 +27,10 @@ unzip master.zip
 
 sudo mv enki-master/etc/nginx/sites-available/default /etc/nginx/sites-available/default
 sudo rm -rf enki-master/etc/nginx/sites-available
+
+sudo rm -rf /usr/share/nginx/html/*
 sudo cp -rf enki-master/* /usr/share/nginx/html
 
 sudo chmod 755 -R /usr/share/nginx/html
 
-mysql -u root -p blog < /usr/share/nginx/html/db.sql
+mysql -u root -p < /usr/share/nginx/html/db.sql
