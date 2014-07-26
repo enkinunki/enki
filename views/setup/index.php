@@ -15,7 +15,7 @@
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
                         
-        <link href="theme.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/theme.css" />
     </head>
     
     <body >
