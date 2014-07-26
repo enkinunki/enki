@@ -21,6 +21,7 @@ done
 
 sudo cp etc/nginx/sites-available/default /etc/nginx/sites-available/default
 cd /tmp
+rm -rf master.zip* enki-master*
 wget https://github.com/enkinunki/enki/archive/master.zip
 unzip master.zip
 sudo cp -rf enki-master/* /usr/share/nginx/html
