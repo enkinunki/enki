@@ -23,12 +23,12 @@
     </head>
     <body>
         <div class="content">
-            <h1>one-php-mvc-blog Setup</h1>
+            <h1>enki Setup</h1>
             <?php 
             $settings = $this->get_settings(FALSE);
             if($settings === NULL) {
             ?>
-            <p>Congratulations! It appears the webserver is configured correctly to handle requests. We are almost done setting up and just need a few more details about your blog. Thank you for setting up one-php-mvc-blog as your blog engine.</p>
+            <p>Congratulations! It appears the webserver is configured correctly to handle requests. We are almost done setting up and just need a few more details about your blog. Thank you for setting up enki as your blog engine.</p>
             <p class="error"><?php echo $model['error']; ?></p>
             <form method="post">
                 <label for="blog_name">Blog Name</label>
@@ -42,12 +42,12 @@
                 <input type="submit" name="submit" value="Complete Setup" />
             </form>
             <?php } else { ?>
-            <p>one-php-mvc-blog has already been set up. If you need to administer the site, please visit the login link below. If you need to setup the site again, you will need to delete the records in the <code>setting</code> database table to allow the setup to continue.</p>
+            <p>enki has already been set up. If you need to administer the site, please visit the login link below. If you need to setup the site again, you will need to delete the records in the <code>setting</code> database table to allow the setup to continue.</p>
             <?php } ?>
         </div>
         
         <footer>
-            powered by <a href="https://github.com/ShadowedMists/one-php-mvc-blog" target="_blank">one-php-mvc-blog</a> | <a href="<?php echo $this->route_url(NULL, 'admin'); ?>">admin</a>
+            powered by <a href="https://github.com/ShadowedMists/enki" target="_blank">enki</a> | <a href="<?php echo $this->route_url(NULL, 'admin'); ?>">admin</a>
         </footer>
     </body>
 </html>
