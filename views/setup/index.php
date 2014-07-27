@@ -10,11 +10,9 @@ $settings = $this->get_settings($redirect); ?>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="/css/site.css" />                        
     <link rel="stylesheet" type="text/css" href="/css/theme.css" />
   </head>
 
@@ -91,36 +89,31 @@ $settings = $this->get_settings($redirect); ?>
       <div class="row">
         <div class="col-md-4 col-sm-6">
           <div class="well"> 
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" method="post">
               <h4>Setup</h4>
-              <div class="form-group" style="padding:14px;">
-                <textarea class="form-control" placeholder="Update your status"></textarea>
-              </div>
-              <button class="btn btn-success pull-right" type="button">Post</button><ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>
               <?php
-                $settings = $this->get_settings(FALSE);
-                if($settings === NULL) {
+              $settings = $this->get_settings(FALSE);
+              if($settings === NULL) {
               ?>
               <p>Congratulations! It appears the webserver is configured correctly to handle requests. We are almost done setting up and just need a few more details about your blog. Thank you for setting up one-php-mvc-blog as your blog engine.</p>
               <p class="error"><?php echo $model['error']; ?></p>
               <div class="form-group" style="padding:14px;">
-                <form method="post">
-                  <label for="blog_name">Blog Name</label>
-                  <input type="text" name="blog_name" required maxlength="63" value="<?php echo $model['blog_name']; ?>" />
-                  <label for="display_name">Your Name</label>
-                  <input type="text" name="display_name" required maxlength="63" value="<?php echo $model['display_name']; ?>" />
-                  <label for="email">Email</label>
-                  <input type="email" name="email" required maxlength="250" value="<?php echo $model['email']; ?>" />
-                  <label for="password">Password</label>
-                  <input type="password" name="password" required />
-                  <input type="submit" name="submit" value="Complete Setup" />
-                </form>
+                <label for="blog_name">Blog Name</label>
+                <input class="form-control" placeholder="Blog Name" type="text" name="blog_name" required maxlength="63" value="<?php echo $model['blog_name']; ?>" />
+                <label for="display_name">Your Name</label>
+                <input class="form-control" placeholder="Your Name" type="text" name="display_name" required maxlength="63" value="<?php echo $model['display_name']; ?>" />
+                <label for="email">Email</label>
+                <input class="form-control" placeholder="Email" type="email" name="email" required maxlength="250" value="<?php echo $model['email']; ?>" />
+                <label for="password">Password</label>
+                <input class="form-control" placeholder="Password" type="password" name="password" required />
               </div>
+              <button class="btn btn-success pull-right" type="submit" name="submit">Complete Setup</button>
+              <!--<ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>-->
               <?php } else { ?>
-                <p>one-php-mvc-blog has already been set up. If you need to administer the site, please visit the login link below. If you need to setup the site again, you will need to delete the records in the <code>setting</code> database table to allow the setup to continue.</p>
+              <p>one-php-mvc-blog has already been set up. If you need to administer the site, please visit the login link below. If you need to setup the site again, you will need to delete the records in the <code>setting</code> database table to allow the setup to continue.</p>
               <?php } ?>
             </form>
-          </div>
+          </div><!--
           <div class="panel panel-default">
             <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>More Templates</h4></div>
             <div class="panel-body">
@@ -130,8 +123,8 @@ $settings = $this->get_settings($redirect); ?>
               <hr>
               <ul class="list-unstyled"><li><a href="http://www.bootply.com/templates">Dashboard</a></li><li><a href="http://www.bootply.com/templates">Darkside</a></li><li><a href="http://www.bootply.com/templates">Greenfield</a></li></ul>
             </div>
-          </div> 
-        </div>
+          </div> -->
+        </div> <!--
         <div class="col-md-4 col-sm-6">
           <div class="well"> 
             <form class="form">
@@ -201,8 +194,8 @@ $settings = $this->get_settings($redirect); ?>
               </div>
             </div>
           </div>
-        </div>
-      </div><!--/row-->
+        </div> -->
+      </div><!--/row--> <!--
       <hr>
       <div class="row">
         <div class="col-md-12"><h2>Posts</h2></div>
@@ -262,8 +255,8 @@ $settings = $this->get_settings($redirect); ?>
               <p>Mobile first" is a responsive Web design practice that prioritizes consideration of smart phones and mobile devices when creating Web pages.</p>
             </div>
           </div> 
-        </div><!--/articles-->
-      </div><!--/row-->
+        </div><!--/articles--> <!--
+      </div><!--/row--> <!--
       <hr>
       <div class="row">
         <div class="col-sm-4 col-xs-6">
@@ -278,7 +271,7 @@ $settings = $this->get_settings($redirect); ?>
               </p>
             </div>
           </div>
-        </div><!--/col-->
+        </div><!--/col--> <!--
         <div class="col-sm-4 col-xs-6">
           <div class="panel panel-default">
             <div class="panel-thumbnail"><img src="//placehold.it/450/DD66DD/FFF" class="img-responsive" ></div>
@@ -291,7 +284,7 @@ $settings = $this->get_settings($redirect); ?>
               </p>
             </div>
           </div>
-        </div><!--/col-->
+        </div><!--/col--> <!--
         <div class="col-sm-4 col-xs-6">
           <div class="panel panel-default">
             <div class="panel-thumbnail"><img src="//placehold.it/450/2222CC/EEE" class="img-responsive" ></div>
@@ -304,9 +297,9 @@ $settings = $this->get_settings($redirect); ?>
               </p>
             </div>
           </div>
-        </div><!--/col-->
-      </div><!--/row-->
-      <div class="row">
+        </div><!--/col--> <!--
+      </div><!--/row--> 
+      <div class="row"><!--
         <div class="col-md-12"><h2>Playground</h2></div>
         <div class="col-md-12">
           <div class="alert alert-info alert-dismissable">
@@ -389,7 +382,7 @@ $settings = $this->get_settings($redirect); ?>
                       <div class="well well-sm">I've decided that I like wells.</div>
                     </div>
                   </div>
-                </div> <!-- /tabbable -->
+                </div> <!-- /tabbable --> <!--
                 <div class="col-sm-12 text-center">
                   <ul class="pagination center-block" style="display:inline-block;">
                     <li><a href="#"><i class="glyphicon glyphicon-chevron-left"></i></a></li>
@@ -403,13 +396,13 @@ $settings = $this->get_settings($redirect); ?>
                 </div>
               </div>
           </div> 
-        </div>
+        </div>-->
         <br>
         <div class="clearfix"></div>
         <hr>
           <div class="col-md-12 text-center"><p><a href="http://www.bootply.com/download/90113" target="_ext">Download Google Plus Style Template</a><br><a href="http://bootply.com/templates" target="_ext">More Bootstrap Templates by @Bootply</a></p></div>
         <hr>
-      </div><!--/row-->
+      </div><!--row--> 
     </div><!--/main-->
     <!--login modal-->
     <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
