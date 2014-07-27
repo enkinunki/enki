@@ -14,7 +14,7 @@
         <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-                        
+        <link rel="stylesheet" type="text/css" href="/css/site.css" />                        
         <link rel="stylesheet" type="text/css" href="/css/theme.css" />
     </head>
     
@@ -99,11 +99,28 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootstrap Examples</h4></div>
                     <div class="panel-body">
-                      <div class="list-group">
-                        <a href="http://bootply.com/tagged/modal" class="list-group-item">Modal / Dialog</a>
-                        <a href="http://bootply.com/tagged/datetime" class="list-group-item">Datetime Examples</a>
-                        <a href="http://bootply.com/tagged/datatable" class="list-group-item">Data Grids</a>
-                      </div>
+<?php
+  $settings = $this->get_settings(FALSE);
+  if($settings === NULL) {
+?>
+<p>Congratulations! It appears the webserver is configured correctly to handle requests. We are almost done setting up and just need a few more details about your blog. Thank you for setting up one-php-mvc-blog as your blog engine.</p>
+<p class="error"><?php echo $model['error']; ?></p>
+<div class="form-group" style="padding:14px;">
+<form method="post">
+<label for="blog_name">Blog Name</label>
+<input type="text" name="blog_name" required maxlength="63" value="<?php echo $model['blog_name']; ?>" />
+<label for="display_name">Your Name</label>
+<input type="text" name="display_name" required maxlength="63" value="<?php echo $model['display_name']; ?>" />
+<label for="email">Email</label>
+<input type="email" name="email" required maxlength="250" value="<?php echo $model['email']; ?>" />
+<label for="password">Password</label>
+<input type="password" name="password" required />
+<input type="submit" name="submit" value="Complete Setup" />
+</form>
+</div>
+<?php } else { ?>
+<p>one-php-mvc-blog has already been set up. If you need to administer the site, please visit the login link below. If you need to setup the site again, you will need to delete the records in the <code>setting</code> database table to allow the setup to continue.</p>
+<?php } ?>
                     </div>
                 </div>
              
