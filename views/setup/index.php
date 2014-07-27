@@ -6,7 +6,7 @@ $settings = $this->get_settings($redirect); ?>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
     <meta charset="utf-8">
-    <title>Bootstrap Google Plus Theme by @Bootply</title>
+    <title>Enki</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
@@ -15,18 +15,17 @@ $settings = $this->get_settings($redirect); ?>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="/css/theme.css" />
   </head>
-
   <body >
     <div class="navbar navbar-fixed-top header">
       <div class="col-md-12">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand">Bootstrap</a>
+          <a href="<?php echo $this->route_url(NULL, 'home'); ?>" class="navbar-brand">Enki</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
             <i class="glyphicon glyphicon-search"></i>
           </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse1">
-          <form class="navbar-form pull-left">
+          <form class="navbar-form pull-right">
             <div class="input-group" style="max-width:470px;">
               <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
               <div class="input-group-btn">
@@ -34,28 +33,12 @@ $settings = $this->get_settings($redirect); ?>
               </div>
             </div>
           </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://www.bootply.com" target="_ext">Bootply+</a></li>
-            <li>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-bell"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><span class="badge pull-right">40</span>Link</a></li>
-                <li><a href="#"><span class="badge pull-right">2</span>Link</a></li>
-                <li><a href="#"><span class="badge pull-right">0</span>Link</a></li>
-                <li><a href="#"><span class="label label-info pull-right">1</span>Link</a></li>
-                <li><a href="#"><span class="badge pull-right">13</span>Link</a></li>
-              </ul>
-            </li>
-            <li><a href="#" id="btnToggle"><i class="glyphicon glyphicon-th"></i></a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
-          </ul>
         </div>  
       </div> 
     </div>
     <div class="navbar navbar-default" id="subnav">
       <div class="col-md-12">
         <div class="navbar-header">
-
           <a href="#" style="margin-left:15px;" class="navbar-btn btn btn-default btn-plus dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-home" style="color:#dd1111;"></i> Home <small><i class="glyphicon glyphicon-chevron-down"></i></small></a>
           <ul class="nav dropdown-menu">
             <li><a href="#"><i class="glyphicon glyphicon-user" style="color:#1111dd;"></i> Profile</a></li>
@@ -65,15 +48,12 @@ $settings = $this->get_settings($redirect); ?>
             <li><a href="#"><i class="glyphicon glyphicon-cog" style="color:#dd1111;"></i> Settings</a></li>
             <li><a href="#"><i class="glyphicon glyphicon-plus"></i> More..</a></li>
           </ul>
-
-
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse2">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse2">
           <ul class="nav navbar-nav navbar-right">
@@ -107,8 +87,7 @@ $settings = $this->get_settings($redirect); ?>
                 <label for="password">Password</label>
                 <input class="form-control" placeholder="Password" type="password" name="password" required />
               </div>
-              <button class="btn btn-success pull-right" type="submit" name="submit">Complete Setup</button>
-              <!--<ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>-->
+              <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit" name="submit">Complete Setup</button></span>
               <?php } else { ?>
               <p>one-php-mvc-blog has already been set up. If you need to administer the site, please visit the login link below. If you need to setup the site again, you will need to delete the records in the <code>setting</code> database table to allow the setup to continue.</p>
               <?php } ?>
@@ -400,7 +379,11 @@ $settings = $this->get_settings($redirect); ?>
         <br>
         <div class="clearfix"></div>
         <hr>
-          <div class="col-md-12 text-center"><p><a href="http://www.bootply.com/download/90113" target="_ext">Download Google Plus Style Template</a><br><a href="http://bootply.com/templates" target="_ext">More Bootstrap Templates by @Bootply</a></p></div>
+          <div class="col-md-12 text-center"><p>
+            Powered by <a href="https://github.com/enkinunki/enki" target="_blank">Enki</a> 
+            | <a href="<?php echo $this->route_url(NULL, 'admin'); ?>">Admin</a>
+            <?php if ($session !== NULL ) { ?>| <a href="<?php echo $this->route_url('logoff', 'admin'); ?>">Logoff</a><?php }?>
+          </div>
         <hr>
       </div><!--row--> 
     </div><!--/main-->
