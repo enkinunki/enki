@@ -35,6 +35,8 @@ body {
 .btn-danger,.label-danger,.progress-bar-danger{background-color:#dd4b39;}
 .btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444444;}
 
+.progress{height:4px;margin-top:16px;margin-bottom:16px;}
+
 hr {border-color:#ececec;}
 
 button {
@@ -91,6 +93,8 @@ h3,h4,h5 {
    border-radius:0;
    margin-top:-1px;
 }
+
+a.blacklink:link {color: #000000;}
 /* end theme styles */
 
 

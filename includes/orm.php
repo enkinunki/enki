@@ -59,7 +59,7 @@ class entry {
     }
 
     public static function select($offset = 0) { 
-        $sql = 'select id, title, image_url, published, snippet, null as body, created, updated from entry where published = 1 order by id desc limit %d, 25';
+        $sql = 'select id, title, image_url, published, snippet, body, created, updated from entry where published = 1 order by id desc limit %d, 25';
         $sql = sprintf($sql, $offset);
         $res = mysqli_query(Application::$DB_CONNECTION, $sql);
         if($res === FALSE || mysqli_num_rows($res) === 0) { 
