@@ -1,6 +1,7 @@
 <?php 
-$redirect = isset($this->settings_redirect) ? $this->settings_redirect : NULL;
-$settings = $this->get_settings($redirect); ?>
+  $redirect = isset($this->settings_redirect) ? $this->settings_redirect : NULL;
+  $settings = $this->get_settings($redirect); 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +35,9 @@ $settings = $this->get_settings($redirect); ?>
               $settings = $this->get_settings(FALSE);
               if($settings === NULL) {
               ?>
-              <p>Congratulations! It appears the webserver is configured correctly to handle requests. We are almost done setting up and just need a few more details about your blog. Thank you for setting up enki as your blog engine.</p>
+              <p>Congratulations! It appears the webserver is configured correctly to handle requests. 
+              We are almost done setting up and just need a few more details about your blog. 
+              Thank you for setting up <a href="https://github.com/ShadowedMists/one-php-mvc-blog" target="_blank">one-php-mvc-blog</a> as your blog engine.</p>
               <p class="error"><?php echo $model['error']; ?></p>
               <div class="form-group" style="padding:14px;">
                 <label for="blog_name">Blog Name</label>
@@ -59,30 +62,10 @@ $settings = $this->get_settings($redirect); ?>
         <div class="clearfix"></div>
         <hr>
           <div class="col-md-12 text-center"><p>
-            Powered by <a href="https://github.com/enkinunki/enki" target="_blank">Enki</a> 
-            | <a href="<?php echo $this->route_url(NULL, 'admin'); ?>">Admin</a>
-            <?php if ($session !== NULL ) { ?>| <a href="<?php echo $this->route_url('logoff', 'admin'); ?>">Logoff</a><?php }?>
+            Made by <a href="https://github.com/enkinunki/" target="_blank">Enki Nunki</a> 
           </div>
         <hr>
       </div><!--row--> 
     </div><!--/main-->
-    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <!-- JavaScript jQuery code from Bootply.com editor -->
-    <script type='text/javascript'>
-      $(document).ready(function() {
-        /* toggle layout */
-        $('#btnToggle').click(function(){
-          if ($(this).hasClass('on')) {
-            $('#main .col-md-6').addClass('col-md-4').removeClass('col-md-6');
-            $(this).removeClass('on');
-          }
-          else {
-            $('#main .col-md-4').addClass('col-md-6').removeClass('col-md-4');
-            $(this).addClass('on');
-          }
-        });
-      });
-    </script>
   </body>
 </html>
