@@ -37,6 +37,8 @@ body {
 
 .progress{height:4px;margin-top:16px;margin-bottom:16px;}
 
+.label{display:inline-flex;padding:.2em .6em .3em;font-size:75%;font-weight:bold;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}
+
 hr {border-color:#ececec;}
 
 button {
@@ -94,7 +96,7 @@ h3,h4,h5 {
    margin-top:-1px;
 }
 
-a.blacklink:link {color: #000000;}
+a.blacklink:link, a.blacklink:visited, a.blacklink:hover, a.blacklink:active {color: #000000;}
 /* end theme styles */
 
 
